@@ -1,16 +1,8 @@
-
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const PersonaSchema = new Schema({
-  nombre: {
-    type: String,
-    required: true
-  },
-  edad: {
-    type: String,
-    required: true
-  }
+const PersonaSchema = new mongoose.Schema({
+  nombre: String,
+  edad: String
 });
 
 module.exports = mongoose.model('Persona', PersonaSchema);
